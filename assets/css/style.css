@@ -1,0 +1,359 @@
+* {
+  box-sizing: border-box;
+  font-family: Roboto, serif;
+}
+
+html, body {
+  height: 100%;
+  margin: 0;
+}
+
+body {
+  background: #F9FAFC;
+  min-height: 100vh;
+}
+
+aside {
+  float: left;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100vh;
+  width: 100px;
+  background-color: #01134E;
+}
+aside img {
+  min-width: 40px;
+  position: relative;
+  top: 30px;
+  width: 2vw;
+}
+
+header {
+  width: 100%;
+  height: 10vh;
+  background-color: white;
+  border-bottom: #DAE4F2 1px solid;
+}
+header .wrapper {
+  height: 10vh;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+header .wrapper .path {
+  position: relative;
+  font-size: 18px;
+  width: 10vw;
+  justify-content: space-around;
+  align-items: center;
+  display: flex;
+  left: 4vw;
+}
+header .wrapper .path img {
+  margin: 10px;
+}
+header .wrapper .profile {
+  font-size: 18px;
+  width: 14vw;
+  justify-content: space-around;
+  margin: 4px;
+  align-items: center;
+  display: flex;
+  position: relative;
+  right: 4vw;
+}
+header .wrapper .profile span {
+  margin: 10px;
+}
+header .wrapper .profile .profile-img {
+  width: 3vw;
+  max-width: 4vw;
+}
+
+.far {
+  color: #8089A6;
+}
+
+.fas {
+  color: #8089A6;
+}
+
+.nav-badge {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #2A74DB;
+  width: 24px;
+  height: 24px;
+  position: absolute;
+  top: 10px;
+  left: 48px;
+  border-radius: 12px;
+}
+.nav-badge span {
+  color: white;
+}
+
+section {
+  width: 100%;
+  height: 100%;
+}
+
+main {
+  height: 90vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+main .content {
+  width: 90%;
+  height: 80%;
+  position: relative;
+  background-color: aquamarine;
+  max-width: 1200px;
+  box-shadow: 0px 0px 30px rgba(153, 163, 174, 0.06);
+}
+main .content .dialogs {
+  float: left;
+  border-right: 1px solid #EDF0F4;
+  background-color: white;
+  width: 40%;
+  height: 100%;
+  overflow: hidden;
+}
+main .content .dialogs .dialog {
+  background-color: white;
+  height: 120px;
+  width: 100%;
+}
+
+.sender-wrapper {
+  display: flex;
+  flex-direction: row;
+}
+.sender-wrapper .green-indicator {
+  justify-self: flex-start;
+  width: 8px;
+  height: 8px;
+  background-color: #0AD69C;
+  border-radius: 4px;
+}
+.sender-wrapper .indicator {
+  margin-left: 8px;
+}
+
+.dialog-info {
+  height: 100%;
+  width: 80%;
+  float: left;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 20px;
+}
+.dialog-info .dialog-text {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  margin-left: 40px;
+}
+.dialog-info .dialog-text p {
+  position: relative;
+  margin: 0 0 8px;
+  font-family: "Exo 2", serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 19px;
+  letter-spacing: 0.571429px;
+  color: #01134E;
+}
+.dialog-info .dialog-text span {
+  opacity: 0.43;
+}
+.dialog-info img {
+  width: 60px;
+}
+
+.time {
+  height: 100%;
+  width: 50px;
+  float: right;
+}
+.time span {
+  color: #9BA0AD;
+  float: right;
+  margin-right: 10px;
+  margin-top: 10px;
+}
+
+.not-read {
+  background-color: #F7F9FC !important;
+}
+
+.active {
+  position: relative;
+  box-shadow: 0 5px 5px rgba(190, 200, 212, 0.2), 0px -5px 5px rgba(224, 224, 224, 0.15);
+}
+
+nav {
+  top: 80px;
+  position: relative;
+  width: 100%;
+  height: 50vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+nav .nav-item {
+  margin-top: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 60px;
+  width: 100%;
+  position: relative;
+  cursor: pointer;
+}
+nav .nav-item i:hover {
+  color: white;
+}
+nav .checked::before {
+  content: "";
+  bottom: 0;
+  left: 0;
+  position: absolute;
+  width: 4px;
+  height: 100%;
+  background-color: #0AD69C;
+  transition: 0.2s;
+  transform: scaleX(1);
+}
+
+.messages-wrapper {
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  float: right;
+  width: 60%;
+  height: 100%;
+  background-color: white;
+}
+.messages-wrapper input {
+  margin-left: 20px;
+  width: 500px;
+  font-size: 20px;
+  height: 50px;
+  border: none;
+}
+.messages-wrapper input[type=text]::placeholder {
+  opacity: 0.2;
+}
+.messages-wrapper input:active, .messages-wrapper :hover, .messages-wrapper :focus {
+  outline: 0;
+  outline-offset: 0;
+}
+
+.search-message {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  width: 100%;
+  height: 60px;
+  border-bottom: 1px solid #DAE4F2;
+}
+.search-message i {
+  color: #DADADA;
+  margin-left: 20px;
+}
+.search-message input {
+  margin-left: 20px;
+}
+
+.messages {
+  min-height: -webkit-min-content;
+  min-height: min-content;
+  overflow: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding: 20px;
+  height: 80%;
+  width: 100%;
+}
+.messages .sent {
+  align-self: flex-end;
+}
+.messages img {
+  height: 40px;
+  width: 40px;
+}
+.messages .message {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.messages .message .received {
+  margin-left: 20px;
+}
+
+.write-message {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  position: relative;
+  width: 100%;
+  height: 80px;
+  box-shadow: 0 0 20px rgba(153, 163, 174, 0.146541);
+}
+.write-message .icons-wrapper {
+  margin-right: 20px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.write-message .icons-wrapper .m-icon {
+  margin-left: 30px;
+  color: #DADADA;
+}
+.write-message .send-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: 40px;
+  width: 50px;
+  height: 50px;
+  box-shadow: 0 0 15px rgba(153, 163, 174, 0.259256);
+  border-radius: 7px;
+}
+.write-message .send-button i {
+  color: #0AD69C;
+}
+
+.text-box {
+  position: relative;
+  padding: 10px;
+  margin-bottom: 20px;
+  width: 400px;
+  background-color: #F7F9FC;
+  border-radius: 5px;
+}
+.text-box p {
+  margin-left: 10px;
+  width: 320px;
+  float: left;
+}
+.text-box span {
+  color: #9BA0AD;
+  right: 10px;
+  bottom: 10px;
+  position: absolute;
+  float: right;
+  line-height: 20px;
+}
